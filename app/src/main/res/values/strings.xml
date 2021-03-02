@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">IMS</string>
+    <string name="inventory_management_system">INVENTORY MANAGEMENT SYSTEM</string>
+    <string name="logo">TODO</string>
+    <string name="login">Login</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="submit">SUBMIT</string>
+    <string name="registration_page">Registration Page</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="Email">Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="create_employee">Create Employee</string>
+
+    <string name="todo">TODO</string>
+    <string name="admin">Admin</string>
+    <string name="employee_dashboard">Employee Dashboard</string>
+
+</resources>
