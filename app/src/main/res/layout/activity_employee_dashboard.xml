@@ -113,7 +113,9 @@
                         android:layout_weight="1"
                         android:background="@drawable/card_design"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:onClick="cuser"
+                        android:id="@+id/cuser">
 
 
                         <ImageView

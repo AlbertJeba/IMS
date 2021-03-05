@@ -14,21 +14,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Category extends AppCompatActivity {
+public class cuser extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase db = FirebaseDatabase.getInstance();
-    DatabaseReference root = db.getReference().child("AJ");
+    DatabaseReference root = db.getReference().child("user");
     MyAdapter adapter;
     ArrayList<Model> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
+        setContentView(R.layout.activity_cuser);
 
-        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.rcuser);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

@@ -18,7 +18,7 @@ public class Registration extends AppCompatActivity {
         regbtn.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            startActivity(new Intent(getApplicationContext(), Employee_dashboard.class));
+                                            startActivity(new Intent(getApplicationContext(), Dashboard.class));
 
                                         }
                                     }

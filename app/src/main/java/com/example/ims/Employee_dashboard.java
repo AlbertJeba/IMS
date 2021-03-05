@@ -25,4 +25,10 @@ public class Employee_dashboard extends AppCompatActivity {
         Intent intent = new Intent(Employee_dashboard.this, Category.class);
         startActivity(intent);
     }
+
+
+    public void cuser(View view) {
+        Intent intent = new Intent(Employee_dashboard.this, cuser.class);
+        startActivity(intent);
+    }
 }
