@@ -27,8 +27,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item2, parent, false);
-        View b = LayoutInflater.from(context).inflate(R.layout.item, parent, false);
+        View v = LayoutInflater.from(context).inflate(R.layout.item, parent, false);
+       // View b = LayoutInflater.from(context).inflate(R.layout.item2, parent, false);
         return new MyViewHolder(v);
 
     }
@@ -36,10 +36,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Model model = mList.get(position);
-       // holder.c1.setText(model.getC1());
-        // holder.n1.setText(model.getN1());
-        holder.name.setText(model.getName());
-       holder.role.setText(model.getRole());
+        holder.c1.setText(model.getC1());
+         holder.n1.setText(model.getN1());
+        //holder.name.setText(model.getName());
+       //holder.role.setText(model.getRole());
     }
 
     @Override
@@ -54,10 +54,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            // c1= itemView.findViewById(R.id.category_name);
-           // n1 = itemView.findViewById(R.id.Nos);
-            name = itemView.findViewById(R.id.ename);
-            role = itemView.findViewById(R.id.role1);
+             c1= itemView.findViewById(R.id.category_name);
+            n1 = itemView.findViewById(R.id.Nos);
+           // name = itemView.findViewById(R.id.ename);
+            //role = itemView.findViewById(R.id.role1);
         }
     }
 }

@@ -79,7 +79,7 @@
                             app:srcCompat="@drawable/ic_launcher_foreground" />
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/create_employee"
                             android:layout_width="227dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -173,7 +173,7 @@
                             app:srcCompat="@drawable/ic_launcher_foreground" />
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/create_user"
                             android:layout_width="227dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

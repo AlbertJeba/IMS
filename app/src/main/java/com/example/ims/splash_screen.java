@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import static com.example.ims.R.anim.top_animation;
 import static com.example.ims.R.anim.bottom_anim;
 
@@ -32,17 +33,15 @@ public class splash_screen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
 
-
-
         //Animation
 
-        topanim = AnimationUtils.loadAnimation(this,top_animation);
-        bottomanim = AnimationUtils.loadAnimation(this,bottom_anim);
+        topanim = AnimationUtils.loadAnimation(this, top_animation);
+        bottomanim = AnimationUtils.loadAnimation(this, bottom_anim);
 
         //Hooks
         image = findViewById(R.id.imageView);
         title = findViewById(R.id.textView);
-       // owner = findViewById(R.id.owner);
+        // owner = findViewById(R.id.owner);
         progressBar = findViewById(R.id.progressBar);
 
         image.setAnimation(topanim);
@@ -54,15 +53,17 @@ public class splash_screen extends AppCompatActivity {
         title.setAnimation(bottomanim);
         progressBar.setAnimation(bottomanim);
         //owner.setAnimation(bottomanim);
-        new Handler() .postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                    startActivity(new Intent(getApplicationContext(), login_page.class));
-                    finish();
+                  startActivity(new Intent(getApplicationContext(), login_page.class));
+                finish();
 
 
             }
-        },SPLASH_SCREEN);
+
+        }, SPLASH_SCREEN);
+
     }
-    }
+}

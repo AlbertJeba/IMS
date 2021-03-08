@@ -3,7 +3,6 @@ package com.example.ims;
 public class Model {
     String c1;
     String n1;
-    String name;
 
     public String getC1() {
         return c1;
@@ -20,24 +19,4 @@ public class Model {
     public void setN1(String n1) {
         this.n1 = n1;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    String role;
-
-
 }

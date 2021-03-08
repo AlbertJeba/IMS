@@ -31,4 +31,8 @@ public class Employee_dashboard extends AppCompatActivity {
         Intent intent = new Intent(Employee_dashboard.this, cuser.class);
         startActivity(intent);
     }
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
 }
