@@ -48,16 +48,14 @@
                 app:layout_constraintVertical_bias="0.0">
 
 
-
-
                 <TextView
                     android:id="@+id/heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Create User"
+                    android:textAlignment="center"
                     android:textColor="#006600"
                     android:textSize="25dp"
-                    android:textAlignment="center"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/fixed_layout"
                     app:layout_constraintEnd_toEndOf="@+id/fixed_layout"
@@ -65,7 +63,6 @@
                     app:layout_constraintStart_toStartOf="@+id/fixed_layout"
                     app:layout_constraintTop_toTopOf="@+id/fixed_layout"
                     app:layout_constraintVertical_bias="0.198" />
-
 
 
                 <!--This is ImageButton for the expansion icon.-->
@@ -165,19 +162,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/add_user"
                         android:layout_width="150sp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="120sp"
                         android:layout_marginTop="20dp"
-                        android:text="ADD User"
-
-                        android:background="@drawable/button"
-                        android:textSize="20sp"
                         android:layout_marginBottom="20sp"
+                        android:background="@drawable/button"
+                        android:text="ADD User"
+                        android:textSize="20sp"
 
                         />
 
@@ -186,13 +182,25 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcuser"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="480dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/base_cardview">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcuser"
+            android:layout_width="match_parent"
+            android:layout_height="420sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintVertical_bias="0.093" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
