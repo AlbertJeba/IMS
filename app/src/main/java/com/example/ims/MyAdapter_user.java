@@ -11,34 +11,33 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class MyAdapter_user extends RecyclerView.Adapter<MyAdapter_user.MyViewHolder> {
 
     ArrayList<Model> mList;
     Context context;
 
-    public MyAdapter(Context context, ArrayList<Model> mList) {
+    public MyAdapter_user(Context context, ArrayList<Model> mList) {
 
         this.mList = mList;
         this.context = context;
 
     }
 
-
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item, parent, false);
+    public MyAdapter_user.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new MyViewHolder(v);
+        View b = LayoutInflater.from(context).inflate(R.layout.item2, parent, false);
+        return new MyViewHolder(b);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyAdapter_user.MyViewHolder holder, int position) {
         Model model = mList.get(position);
-        holder.c1.setText(model.getC1());
-        holder.n1.setText(model.getN1());
 
+        holder.username.setText(model.getUsername());
+        holder.role.setText(model.getRole());
     }
 
     @Override
@@ -48,14 +47,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView c1, n1;
+        TextView username, role;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            c1 = itemView.findViewById(R.id.category_name);
-            n1 = itemView.findViewById(R.id.Nos);
 
+            username = itemView.findViewById(R.id.username);
+            role = itemView.findViewById(R.id.role);
         }
     }
 }

@@ -24,7 +24,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10sp"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/ims_logo"
+                android:src="@drawable/ims"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"

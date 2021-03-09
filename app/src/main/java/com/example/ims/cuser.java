@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,12 +26,13 @@ import java.util.ArrayList;
 public class cuser extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase db = FirebaseDatabase.getInstance();
-    DatabaseReference root = db.getReference().child("user");
-    MyAdapter adapter;
+    DatabaseReference root = db.getReference().child("login");
+    MyAdapter_user adapter1;
     ArrayList<Model> list;
     ImageButton arrow;
     LinearLayout hiddenView;
     CardView cardView;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,19 @@ public class cuser extends AppCompatActivity {
         arrow = findViewById(R.id.arrow_button);
         hiddenView = findViewById(R.id.hidden_view);
         list = new ArrayList<>();
-        adapter = new MyAdapter(this, list);
+        adapter1 = new MyAdapter_user(this, list);
 
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter1);
+
+        //get the spinner from the xml.
+        Spinner dropdown = findViewById(R.id.spinner1);
+        //create a list of items for the spinner.
+        String[] items = new String[]{"admin", "employee"};
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
+        // There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        //set the spinners adapter to the previously created one.
+        dropdown.setAdapter(adapter);
 
         arrow.setOnClickListener(view -> {
 
@@ -80,7 +93,7 @@ public class cuser extends AppCompatActivity {
                     Model model = dataSnapshot.getValue(Model.class);
                     list.add(model);
                 }
-                adapter.notifyDataSetChanged();
+                adapter1.notifyDataSetChanged();
             }
 
             @Override
