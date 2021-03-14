@@ -10,12 +10,14 @@
         android:roundIcon="@mipmap/ims_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".cuser"></activity>
+        <activity android:name=".cuser"/>
         <activity android:name=".Category"
              android:windowSoftInputMode="adjustPan"
                 />
-        <activity android:name=".Employee_dashboard" />
-        <activity android:name=".Dashboard" />
+        <activity android:name=".Employee_dashboard"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".Dashboard"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity android:name=".Registration" />
         <activity android:name=".login_page" />
         <activity android:name=".MainActivity" />

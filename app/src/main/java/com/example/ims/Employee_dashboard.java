@@ -2,6 +2,9 @@ package com.example.ims;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 
@@ -31,8 +34,19 @@ public class Employee_dashboard extends AppCompatActivity {
         Intent intent = new Intent(Employee_dashboard.this, cuser.class);
         startActivity(intent);
     }
+
+    // menu inflate
     @Override
-    public void onBackPressed() {
-        moveTaskToBack(true);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.admin_menu, menu);
+        return true;
+    }
+
+    //logout
+    public void logout(MenuItem item) {
+        startActivity(new Intent(this,login_page.class));
+        preferences.clearData(this);
+        finish();
     }
 }

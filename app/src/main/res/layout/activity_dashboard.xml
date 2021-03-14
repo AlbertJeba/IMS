@@ -47,13 +47,13 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/c_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
-                    android:id="@+id/c_cat"
                     android:onClick="c_cat"
-                    android:weightSum="1" >
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
 
                     <LinearLayout
@@ -84,7 +84,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/maven_pro"
                             android:scrollHorizontally="false"
-                            android:text="Create Employee"
+                            android:text="Category"
                             android:textAlignment="center"
                             android:textColor="@android:color/holo_red_light"
                             android:textSize="30sp"
@@ -95,12 +95,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/c_user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
-                    android:id="@+id/c_user"
                     android:onClick="c_user"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
 
@@ -187,8 +187,6 @@
 
 
                 </LinearLayout>
-
-
 
 
             </LinearLayout>

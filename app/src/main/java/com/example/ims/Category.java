@@ -26,7 +26,7 @@ import java.util.List;
 public class Category extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase db = FirebaseDatabase.getInstance();
-    DatabaseReference root = db.getReference().child("AJ");
+    DatabaseReference root = db.getReference().child("Category");
     MyAdapter adapter;
     ArrayList<Model> list;
     Button add;
@@ -77,7 +77,7 @@ public class Category extends AppCompatActivity {
                 userMap.put("n1" , n1);
 
 
-                root.push().setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                root.child(c1).setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(Category.this, "Data Saved", Toast.LENGTH_SHORT).show();
