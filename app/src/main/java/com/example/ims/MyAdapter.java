@@ -37,7 +37,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Model model = mList.get(position);
         holder.c1.setText(model.getC1());
-        holder.n1.setText(model.getN1());
+
 
     }
 
@@ -54,7 +54,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             super(itemView);
 
             c1 = itemView.findViewById(R.id.category_name);
-            n1 = itemView.findViewById(R.id.Nos);
+
 
         }
     }

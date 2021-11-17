@@ -3,6 +3,7 @@ package com.example.ims;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,8 +30,6 @@ public class login_page extends AppCompatActivity {
     Switch active;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,43 +49,52 @@ public class login_page extends AppCompatActivity {
 
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                String input1 = name.getText().toString();
-                                String input2 = password.getText().toString();
+                        String input1 = name.getText().toString();
+                        String input2 = password.getText().toString();
 
+                        if (TextUtils.isEmpty(input1)) {
 
-                                if (dataSnapshot.child(input1).exists()) {
-                                    if (dataSnapshot.child(input1).child("password").getValue(String.class).equals(input2)) {
-                                        if (active.isChecked()) {
-                                            if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("admin")) {
-                                                preferences.setDataLogin(login_page.this, true);
-                                                preferences.setData_role(login_page.this, "admin");
-                                                startActivity(new Intent(login_page.this, Dashboard.class));
-                                                finish();
-                                            } else if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("employee")) {
-                                                preferences.setDataLogin(login_page.this, true);
-                                                preferences.setData_role(login_page.this, "employee");
-                                                startActivity(new Intent(login_page.this, Employee_dashboard.class));
-                                                finish();
-                                            }
-                                        } else {
-                                            if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("admin")) {
-                                                preferences.setDataLogin(login_page.this, false);
-                                                startActivity(new Intent(login_page.this, Dashboard.class));
-                                                finish();
+                            name.setError("User Name is required");
+                            return;
+                        }
+                        if (TextUtils.isEmpty(input2)) {
 
-                                            } else if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("employee")) {
-                                                preferences.setDataLogin(login_page.this, false);
-                                                startActivity(new Intent(login_page.this, Employee_dashboard.class));
-                                                finish();
-                                            }
-                                        }
-
-                                    } else {
-                                        Toast.makeText(login_page.this, "Wrong password", Toast.LENGTH_SHORT).show();
+                            password.setError("Password is required");
+                            return;
+                        }
+                        if (dataSnapshot.child(input1).exists()) {
+                            if (dataSnapshot.child(input1).child("password").getValue(String.class).equals(input2)) {
+                                if (active.isChecked()) {
+                                    if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("admin")) {
+                                        preferences.setDataLogin(login_page.this, true);
+                                        preferences.setData_role(login_page.this, "admin");
+                                        startActivity(new Intent(login_page.this, Dashboard.class));
+                                        finish();
+                                    } else if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("employee")) {
+                                        preferences.setDataLogin(login_page.this, true);
+                                        preferences.setData_role(login_page.this, "employee");
+                                        startActivity(new Intent(login_page.this, Employee_dashboard.class));
+                                        finish();
                                     }
                                 } else {
-                                    Toast.makeText(login_page.this, "Data not registered", Toast.LENGTH_SHORT).show();
+                                    if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("admin")) {
+                                        preferences.setDataLogin(login_page.this, false);
+                                        startActivity(new Intent(login_page.this, Dashboard.class));
+                                        finish();
+
+                                    } else if (dataSnapshot.child(input1).child("role").getValue(String.class).equals("employee")) {
+                                        preferences.setDataLogin(login_page.this, false);
+                                        startActivity(new Intent(login_page.this, Employee_dashboard.class));
+                                        finish();
+                                    }
                                 }
+
+                            } else {
+                                Toast.makeText(login_page.this, "Wrong password", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(login_page.this, "Data not registered", Toast.LENGTH_SHORT).show();
+                        }
                     }
 
                     @Override

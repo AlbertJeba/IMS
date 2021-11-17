@@ -6,14 +6,17 @@
     android:layout_height="110dp"
     android:layout_margin="10dp"
     android:elevation="8dp"
-    android:padding="10dp"
     android:outlineAmbientShadowColor="@color/black"
+    android:padding="10dp"
+
+    android:background="@drawable/card_design"
     app:cardCornerRadius="10dp"
     tools:targetApi="p">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical">
 
         <LinearLayout
@@ -25,45 +28,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="Category Name :"
-                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Category \nName "
+                android:textColor="#FF0B0B"
+                android:textSize="30sp"
                 android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text=": "
+                android:textColor="#FF0B0B"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
             <TextView
                 android:id="@+id/category_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+               android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
                 android:text="cat1"
-                android:textSize="20sp"
+                android:textColor="#1E3CFB"
+                android:textSize="30sp"
                 android:textStyle="bold" />
+            </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Nos :"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/Nos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="145dp"
-                android:text="cat2"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
 
     </LinearLayout>
 

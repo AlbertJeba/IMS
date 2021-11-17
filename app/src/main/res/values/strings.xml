@@ -25,5 +25,6 @@
     <string name="add">Add</string>
     <string name="password_u">Password</string>
     <string name="role">Role</string>
+    <string name="out">Out of stock</string>
 
 </resources>

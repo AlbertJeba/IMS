@@ -3,31 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="140dp"
     android:layout_margin="10dp"
     android:elevation="8dp"
     android:padding="10dp"
     android:outlineAmbientShadowColor="@color/black"
     app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/white"
     tools:targetApi="p">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center|start">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="User Name :"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#FF2A05"/>
 
             <TextView
                 android:id="@+id/username"
@@ -35,32 +39,38 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="cat1"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#005DFD"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="10sp"
+            android:layout_gravity="center|start">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+
                 android:text="Role :"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#FF2A05"/>
 
             <TextView
                 android:id="@+id/role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="110dp"
                 android:text="cat2"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#005DFD"/>
 
         </LinearLayout>
 

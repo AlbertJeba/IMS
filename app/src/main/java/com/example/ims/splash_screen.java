@@ -17,7 +17,7 @@ import static com.example.ims.R.anim.bottom_anim;
 
 public class splash_screen extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 4000;
+    private static int SPLASH_SCREEN = 2000;
 
     //variables
     Animation topanim, bottomanim;

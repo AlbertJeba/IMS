@@ -14,13 +14,10 @@ import android.os.Bundle;
 public class Employee_dashboard extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_dashboard);
-
-
 
     }
 
@@ -35,6 +32,11 @@ public class Employee_dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void add_product(View view) {
+        Intent intent = new Intent(Employee_dashboard.this, Product.class);
+        startActivity(intent);
+    }
+
     // menu inflate
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,7 +47,7 @@ public class Employee_dashboard extends AppCompatActivity {
 
     //logout
     public void logout(MenuItem item) {
-        startActivity(new Intent(this,login_page.class));
+        startActivity(new Intent(this, login_page.class));
         preferences.clearData(this);
         finish();
     }

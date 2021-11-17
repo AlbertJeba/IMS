@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/title_background"
+        android:gravity="center"
+        android:text="Update Content Panel"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:id="@+id/hidden_view_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_margin="20sp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Product :"
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/d_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:hint="Product Name"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!--Child LinearLayout 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Category :"
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/d_cname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:hint="Category Name"
+                android:textColor="#000"
+
+                android:textColorHint="#000"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--Child LinearLayout 2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Brand :      "
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/d_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:hint="Brand Name"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--Child LinearLayout 3-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Model :      "
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/d_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:hint="Model Name"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--Child LinearLayout 4-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Quantity :  "
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/d_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:hint="Quantity"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--Child LinearLayout 5-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+                android:padding="10dp"
+                android:text="Sold Quantity : "
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/d_sold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+                android:gravity="center|start"
+                android:hint="Sold"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20sp"
+                android:padding="10dp"
+                android:text="Price                :  ₹"
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/d_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2sp"
+                android:gravity="center|start"
+                android:hint="price"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/d_update"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:text="Update"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+</LinearLayout>

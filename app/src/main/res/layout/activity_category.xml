@@ -4,88 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#152B60"
+
     tools:context=".Category">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:fontFamily="@font/bungee_inline"
         android:shadowColor="#000"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="@string/category"
         android:textAlignment="center"
-        android:textColor="#fe3342"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/link"
+        android:textColor="#F88102"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <LinearLayout
-        android:id="@+id/link"
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_margin="5sp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/border"
-        android:fadingEdge="horizontal|vertical"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
+        android:layout_height="660dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
-        <EditText
-            android:id="@+id/c1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginStart="10sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/category_name"
-            android:inputType="text"
-            android:textColor="#F32D2D"
-            android:textSize="20sp"
-            tools:ignore="RtlHardcoded" />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/n1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_margin="10sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/no_of_items"
-            android:inputType="number"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            tools:ignore="RtlHardcoded" />
+            <include layout="@layout/shimmer_category" />
 
-        <Button
-            android:id="@+id/add"
-            android:layout_width="150sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button"
-            android:text="@string/add" />
+            <include layout="@layout/shimmer_category" />
 
-    </LinearLayout>
+            <include layout="@layout/shimmer_category" />
+
+            <include layout="@layout/shimmer_category" />
+
+            <include layout="@layout/shimmer_category" />
+
+            <include layout="@layout/shimmer_category" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="660dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
